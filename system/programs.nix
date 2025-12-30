@@ -17,10 +17,6 @@
       dedicatedServer.openFirewall = true;
     };
 
-    alvr = {
-      enable = true;
-      openFirewall = true;
-    };
 
     mtr.enable = true;
 

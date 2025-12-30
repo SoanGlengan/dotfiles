@@ -14,7 +14,7 @@
         "nix-command"
         "flakes"
       ];
-      trusted-users = [ "silas" ];
+      trusted-users = [ "ansel" ];
     };
   };
 

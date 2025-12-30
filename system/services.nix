@@ -49,24 +49,6 @@
     };
   };
 
-  virtualisation = {
-    docker = {
-      enable = false;
-      rootless = {
-        # enable = true;
-        setSocketVariable = true;
-        daemon.settings = {
-          data-root = "/home/silas/projects/DockerRoot";
-        };
-      };
-
-      daemon.settings = {
-        data-root = "/home/silas/projects/DockerRoot";
-      };
-    };
-
-    virtualbox.host.enable = true;
-  };
 
   xdg = {
     portal = {

@@ -2,11 +2,11 @@
 {
 
   programs.firefox = {
-    enable = true;
-    profiles = {
-      silas = {
-        userChrome = builtins.readFile ./userChrome.css;
-      };
-    };
+    # enable = true;
+    # profiles = {
+    #   ansel = {
+    #     # userChrome = builtins.readFile ./userChrome.css;
+    #   };
+    # };
   };
 }

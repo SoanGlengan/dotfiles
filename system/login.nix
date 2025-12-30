@@ -10,7 +10,7 @@
   users = {
     defaultUserShell = pkgs.zsh;
 
-    users.silas = {
+    users.ansel = {
       shell = pkgs.zsh;
       group = "wheel";
       isNormalUser = true;
@@ -25,7 +25,6 @@
       packages = with pkgs; [ ];
     };
 
-    extraGroups.vboxusers.members = [ "silas" ];
   };
 
 }

@@ -27,8 +27,8 @@
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "silas";
-  home.homeDirectory = "/home/silas";
+  home.username = "ansel";
+  home.homeDirectory = "/home/ansel";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -37,7 +37,7 @@
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
   # release notes.
-  home.stateVersion = "23.11"; # Please read the comment before changing.
+  home.stateVersion = "25.05"; # Please read the comment before changing.
 
   # nixpkgs.overlays = [  (final: prev: {freecad = prev.freecad.overrideAttrs (old: {
   #     src = pkgs.fetchFromGitHub {
@@ -49,13 +49,27 @@
       
   #   });})
   # ];
-
   fonts.fontconfig.enable = true;
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
     # Command line apps
+#    (pkgs.alvr.overrideAttrs (old: {
+ #     pname = "alvr";
+  #version = "20.14.0";
+#
+ # src = fetchFromGitHub {
+  #  owner = "alvr-org";
+   # repo = "ALVR";
+    #tag = "v20.14.0";
+   # fetchSubmodules = true; # TODO devendor openvr
+   # hash = "sha256-K1E8zeSjaUtJ17C9G+aKNw9bzKUzeezUunZc0MM1Rj4=";
+ # };
+  
+ # useFetchCargoVendor = true;
+  #cargoHash = "";
+   # }))
     git
     lazygit
     sshfs
@@ -88,14 +102,39 @@
     bitwarden-desktop
     bitwarden-cli
     comma
+    firefox
+    flameshot
+    flatpak
+    discord
+    r2modman
+    ckan
+    jetbrains.idea-community-src
+    libgbm
+    spicetify-cli
+    swww
+    greetd.greetd
+    greetd.tuigreet
+    bs-manager
+    android-tools
+    godot
+    jetbrains-toolbox
+    peazip
+    gh
+    cargo
+    android-tools
+    qmk
+    vial
 
     # Desktop
     xfce.thunar
     xfce.thunar-volman
+    xfce.thunar-archive-plugin
     feh
     gimp
     freecad
     prusa-slicer
+    hyprpaper
+
     # bambu-studio
     obsidian
     vscode
@@ -126,7 +165,7 @@
     networkmanagerapplet
     pavucontrol
     lxappearance
-    glxinfo
+    mesa-demos
     inxi
     acpi
     pciutils
@@ -208,8 +247,8 @@
 
   programs.git = {
     enable = true;
-    userName = "gagnonsilas";
-    userEmail = "gagnon.silas@gmail.com";
+    userName = "soanglengan";
+    userEmail = "nongag.lesna@gmail.com";
     extraConfig = {
       pull.rebase = false;
       push.autoSetupRemote = true;
@@ -223,14 +262,9 @@
 
   programs.ssh = {
     enable = true; 
-    extraConfig = ''
-    Host github.com
-      HostName github.com
-      IdentityFile ~/.ssh/github
-    Host serverworks
-      HostName 192.168.1.2
-      IdentityFile ~/.ssh/id_ed25519
-    '';
+   };
+  programs.spicetify = {
+    enable = true;
   };
 
 
@@ -250,14 +284,14 @@
       ls = "ls --color=auto";
       grep = "grep --color -i";
       mkdir = "mkdir -p";
-      update = "sudo nixos-rebuild switch --flake /home/silas/.config/nix";
+      update = "sudo nixos-rebuild switch --flake /home/ansel/.config/nix";
       la = "ls -a";
       rr = "rm -r";
-      vim = "echo ERROR";
       hm = "home-manager --flake ~/.config/nix";
       ec = "sudoedit /etc/nixos/configuration.nix";
       eh = "hx ~/.config/nix/";
       neofetch = "neofetch | lolcat";
+      shell = "nix-shell -p";
   };
 
   home.sessionVariables = {

@@ -33,7 +33,7 @@
   
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    # package = pkgs.hyprland;
 
     xwayland.enable = true;
 
@@ -74,17 +74,17 @@
           "$mod, up, movefocus, u"
           "$mod, down, movefocus, d"
           "$mod, h, movefocus, l"
-          "$mod, i, movefocus, r"
-          "$mod, e, movefocus, u"
-          "$mod, n, movefocus, d"
+          "$mod, l, movefocus, r"
+          "$mod, k, movefocus, u"
+          "$mod, j, movefocus, d"
           "$mod SHIFT, left, movewindow, l"
           "$mod SHIFT, right, movewindow, r"
           "$mod SHIFT, up, movewindow, u"
           "$mod SHIFT, down, movewindow, d"
           "$mod SHIFT, h, movewindow, l"
-          "$mod SHIFT, i, movewindow, r"
-          "$mod SHIFT, e, movewindow, u"
-          "$mod SHIFT, n, movewindow, d"
+          "$mod SHIFT, l, movewindow, r"
+          "$mod SHIFT, k, movewindow, u"
+          "$mod SHIFT, j, movewindow, d"
           "$mod SHIFT, n, togglesplit" 
         ]
         ++ (
@@ -116,9 +116,8 @@
       animations.enabled = false;
 
       input = {
-        kb_layout = "us,us";
-        kb_variant = "colemak,";
-        kb_options = "grp:alt_shift_toggle,caps:ctrl_modifier";
+        kb_layout = "us";
+        
         touchpad = {
           scroll_factor = 0.4;
           natural_scroll = true;
@@ -148,7 +147,7 @@
       };
 
       gestures = {
-          workspace_swipe = true;
+         # workspace_swipe = true;
           workspace_swipe_invert = true;
           # workspace_swipe_distance = 100;
           workspace_swipe_cancel_ratio = 0.5;
