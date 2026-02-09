@@ -108,7 +108,7 @@
     discord
     r2modman
     ckan
-    jetbrains.idea-community-src
+    jetbrains.idea
     libgbm
     spicetify-cli
     swww
@@ -124,6 +124,13 @@
     android-tools
     qmk
     vial
+    discord
+    python314Packages.cmake
+    python314Packages.ninja
+    python315
+    libxcb
+    pkgs.android-tools
+  
 
     # Desktop
     xfce.thunar
@@ -157,6 +164,7 @@
     chirp
     cheese
     zathura
+    alvr
     
     # Services
     xdg-utils
