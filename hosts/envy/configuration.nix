@@ -9,7 +9,7 @@
 
 
 services.greetd = {
-  enable = true;
+  enable = false;
   settings = {
     default_session = {
       command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red; --cmd Hyprland";
@@ -54,7 +54,7 @@ services.greetd = {
 services.flatpak.enable = true;
 
   # Enable OpenGL
-  hardware.graphics = {
+ hardware.graphics = {
     enable = true;
   };
   
@@ -94,7 +94,7 @@ services.flatpak.enable = true;
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
     
 
   };

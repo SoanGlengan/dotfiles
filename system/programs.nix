@@ -3,13 +3,10 @@
   programs = {
     zsh.enable = true;
 
-    adb.enable = true;
 
     sway = {
       enable = true;
     };
-
-    light.enable = true; # Volume and brightness key
 
     steam = {
       enable = true;
@@ -37,6 +34,6 @@
     nerd-fonts.symbols-only
     nerd-fonts.dejavu-sans-mono
     xkcd-font
-    charis-sil
+    charis
   ];
 }

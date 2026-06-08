@@ -74,7 +74,6 @@
     lazygit
     sshfs
     htop-vim
-    neofetch
     killall
     sl
     lolcat
@@ -130,6 +129,24 @@
     python315
     libxcb
     pkgs.android-tools
+    blender
+    glib
+    asdf-vm
+    xfce.thunar-archive-plugin
+    mcpelauncher-client
+    gradle
+    fastfetch
+    lapce
+    unityhub
+    handlr
+    xdg-utils
+    wivrn
+    avahi
+    lutris
+    rpcs3
+    rusty-psn-gui
+    passmark-performancetest
+    xenia-canary
   
 
     # Desktop
@@ -168,6 +185,7 @@
     
     # Services
     xdg-utils
+    android-tools
 
     # Configuration
     networkmanagerapplet
@@ -298,13 +316,14 @@
       hm = "home-manager --flake ~/.config/nix";
       ec = "sudoedit /etc/nixos/configuration.nix";
       eh = "hx ~/.config/nix/";
-      neofetch = "neofetch | lolcat";
+      neofetch = "fastfetch | lolcat";
       shell = "nix-shell -p";
   };
 
   home.sessionVariables = {
     PS1 = " %F{blue}%~%f %F{green}>%f ";
     EDITOR = "hx";
+    JAVA_HOME = "/nix/store/rxq387hv5qsbdx23jzffcm8fqrsjw2pp-openjdk-17.0.15+6/bin/java";
   };
 
   # Let Home Manager install and manage itself.

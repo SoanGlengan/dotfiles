@@ -18,7 +18,7 @@
     zls
     nixd
     # python311Packages.python-lsp-server
-    nodePackages.bash-language-server
+    #nodePackages.bash-language-server
     # typst-lsp
     nixfmt-rfc-style
     tinymist
