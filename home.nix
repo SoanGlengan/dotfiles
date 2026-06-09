@@ -23,7 +23,7 @@
 
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "electron-25.9.0"
+    "electron-39.8.10"
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

@@ -57,13 +57,8 @@ services.flatpak.enable = true;
  hardware.graphics = {
     enable = true;
   };
-  
-  hardware.opengl.enable = true;
-
   # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
-  
-  boot.kernelParams = ["nvidia_drm.modeset=1"];
+ services.xserver.videoDrivers = ["nvidia"];
 
   hardware.nvidia = {
 
@@ -94,9 +89,8 @@ services.flatpak.enable = true;
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
     
-
   };
 
  
